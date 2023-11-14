@@ -1,0 +1,41 @@
+// custom.js
+
+// Function to toggle the toolbar visibility
+function toggleToolbar() {
+    const toolbar = document.getElementById('toolbar');
+    toolbar.style.display = toolbar.style.display === 'none' ? 'block' : 'none';
+}
+
+// Function to reset the values in the modal
+function resetValue(componentType) {
+    if (componentType === 'heading') {
+        document.getElementById('headingContent').value = '';
+    } else if (componentType === 'text') {
+        document.getElementById('textTitle').value = '';
+        document.getElementById('textContent').value = '';
+    } else if (componentType === 'link') {
+        document.getElementById('linkURL').value = '';
+        document.getElementById('linkText').value = '';
+    }
+}
+
+// Function to create a component based on the modal input
+function createComponent(componentType) {
+    if (componentType === 'heading') {
+        const headingContent = document.getElementById('headingContent').value;
+        // Implement logic to use headingContent, for example, update the page content
+        console.log('Create heading component with content: ' + headingContent);
+    } else if (componentType === 'text') {
+        const textTitle = document.getElementById('textTitle').value;
+        const textContent = document.getElementById('textContent').value;
+        // Implement logic to use textTitle and textContent, for example, update the page content
+        console.log('Create text component with title: ' + textTitle + ' and content: ' + textContent);
+    } else if (componentType === 'link') {
+        const linkURL = document.getElementById('linkURL').value;
+        const linkText = document.getElementById('linkText').value;
+        // Implement logic to use linkURL and linkText, for example, update the page content
+        console.log('Create link component with URL: ' + linkURL + ' and text: ' + linkText);
+    }
+}
+
+// Add any additional functions you need for your CMS
